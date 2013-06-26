@@ -6,9 +6,10 @@ GIT_REPOS_ARRAY=\
 (\
  ~/.vim/neobundle.vim\
  ~/labo/dotfiles\
- ~/labo/mysnip\
- ~/labo/myvim_dict\
- ~/labo/unite-outline-sources\
+ ~/labo/vim/mysnip\
+ ~/labo/vim/myvim_dict\
+ ~/labo/vim/unite-outline-sources\
+ ~/labo/vim/unite-picktodo\
  ~/labo/codepocket\
  ~/labo/playground\
  ~/labo/mygamelib\
