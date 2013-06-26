@@ -13,6 +13,7 @@ GIT_REPOS_ARRAY=\
  ~/labo/playground\
  ~/labo/mygamelib\
  ~/labo/model_converter\
+ ~/labo/graphic\
 )
 CURREND_DIR=$PWD
 
