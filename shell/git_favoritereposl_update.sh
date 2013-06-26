@@ -17,12 +17,6 @@ GIT_REPOS_ARRAY=\
 )
 CURREND_DIR=$PWD
 
-echo "//--------------------------------------------------------------------------------"
-echo "//  git pull error log"
-echo "//--------------------------------------------------------------------------------"
-
-# echo ${GIT_REPOS_ARRAY[@]}
-
 for dir in ${GIT_REPOS_ARRAY[@]}; do
     if [ -d $dir ]; then
         echo "**** $dir ****"
