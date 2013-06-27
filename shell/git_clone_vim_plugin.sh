@@ -8,7 +8,7 @@ PATH_TO_HERE=`readlink -f $DIRNAME`
 PY_DIR=${PATH_TO_HERE}/../python
 
 
-REPOS_LIST=`grep NeoBundle ~/github/dotfiles/.vimrc | python ${PY_DIR}/git_repos_get.py`
+REPOS_LIST=`grep NeoBundle ~/labo/dotfiles/.vimrc | python ${PY_DIR}/git_repos_get.py`
 
 cd $1
 
