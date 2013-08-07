@@ -1,4 +1,4 @@
-#! python
+#! /usr/bin/python
 # -*- coding: utf-8 -*-
 
 # python labo/codepocket/python/photo_adjust.py ~/test/out ~/test .jpg
@@ -10,12 +10,24 @@ from timestamp import getTimestampStr
 from timestamp import getTimeYear
 from timestamp import getTimeMonth
 
+def echo_usage():
+    print "----------------------------------------"
+    print "this is file sorting program."
+    print "sorting and rename files in target directory."
+    print "* usage *"
+    print "python photo_adjust.py [output_path] [target_path] [target ext]"
+    print "----------------------------------------"
+
 #!
 #! メイン関数
 #!
 if __name__=="__main__":
     argv = sys.argv
     argc = len(argv)
+
+    if argc < 4:
+        echo_usage()
+        sys.exit()
 
     dstdir = argv[1]
     target_pattern = argv[2]
