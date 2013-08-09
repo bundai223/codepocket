@@ -1,4 +1,4 @@
-#! sh
+#! /bin/bash
 # vimrcからpluginをcloneするシェルスクリプト
 
 CURRENT_DIR=$PWD
@@ -15,9 +15,16 @@ cd $1
 for repos in ${REPOS_LIST}; do
 	
 	REPOS_NAME=`echo $repos | sed s_.*/__g`
+    echo "**** ${REPOS_NAME} ****"
 	if [ ! -d $REPOS_NAME ]; then
 		
 		git clone http://github.com/$repos
+    else
+        #echo "repos name : ${REPOS_NAME}"
+        #echo "             ${repos}"
+        cd ${REPOS_NAME}
+        git pull
+        cd ../
 	fi
 done
 
