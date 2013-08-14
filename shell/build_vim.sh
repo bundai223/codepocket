@@ -1,4 +1,4 @@
-
+# !/bin/bash
 cd ~/sample/vim/src
 
 # configure +python +python3 +ruby +perl +lua
@@ -7,7 +7,6 @@ cd ~/sample/vim/src
 --enable-multibyte \
 --enable-perlinterp \
 --enable-pythoninterp \
---enable-python3interp \
 --enable-rubyinterp \
 --enable-luainterp \
 --with-luajit \

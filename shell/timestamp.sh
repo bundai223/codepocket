@@ -1,9 +1,7 @@
-#!sh
-# ファイルのタイムスタンプを取得する処理
+#!/bin/bash
+# 繝輔ぃ繧､繝ｫ縺ｮ繧ｿ繧､繝繧ｹ繧ｿ繝ｳ繝励ｒ蜿門ｾ励☆繧句�ｦ逅�
 
 TARGET=$1
-
-
 
 TIMESTAMP=`ls -lrt --time-style='+%Y%m%d_%H%M%S' ${TARGET} | awk '{print $6}'`
 echo $TIMESTAMP
