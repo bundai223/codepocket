@@ -1,5 +1,5 @@
 #! /bin/bash
-# vimrcからpluginをcloneするシェルスクリプト
+# vimrc縺九ｉplugin繧団lone縺吶ｋ繧ｷ繧ｧ繝ｫ繧ｹ繧ｯ繝ｪ繝励ヨ
 
 CURRENT_DIR=$PWD
 
@@ -8,24 +8,24 @@ PATH_TO_HERE=`readlink -f $DIRNAME`
 PY_DIR=${PATH_TO_HERE}/../python
 
 
-REPOS_LIST=`grep NeoBundle ~/labo/dotfiles/.vimrc | python ${PY_DIR}/git_repos_get.py`
+REPOS_LIST=`grep [NeoBundle\|NeoBundleLazy]\ \' ~/labo/dotfiles/.vimrc | grep -v \"NeoBundle| python ${PY_DIR}/git_repos_get.py`
 
 cd $1
 
 for repos in ${REPOS_LIST}; do
-	
-	REPOS_NAME=`echo $repos | sed s_.*/__g`
+
+    REPOS_NAME=`echo $repos | sed s_.*/__g`
     echo "**** ${REPOS_NAME} ****"
-	if [ ! -d $REPOS_NAME ]; then
-		
-		git clone http://github.com/$repos
+    if [ ! -d $REPOS_NAME ]; then
+
+        git clone http://github.com/$repos
     else
         #echo "repos name : ${REPOS_NAME}"
         #echo "             ${repos}"
         cd ${REPOS_NAME}
         git pull
         cd ../
-	fi
+    fi
 done
 
 cd $CURRENT_DIR

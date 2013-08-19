@@ -15,5 +15,6 @@ if __name__=="__main__":
         
         if( index != 0 ):
             surrounded = str_util.getSurrounded(line, '\'')
-            print surrounded.encode('sjis')
+            if(surrounded !=""):
+                print surrounded.encode('sjis')
 

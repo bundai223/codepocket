@@ -38,7 +38,7 @@ def getScissored(srcstr, begin, end):
             
             return surrounded
     
-    return {}
+    return ""
 
 def getSurrounded(srcstr, sep):
     return getScissored(srcstr, sep, sep);
