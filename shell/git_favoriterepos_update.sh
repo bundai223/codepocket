@@ -12,6 +12,7 @@ GIT_REPOS_ARRAY=\
  ~/labo/vim/unite-picktodo\
  ~/labo/codepocket\
  ~/labo/playground\
+ ~/labo/personal_tips\
 )
 CURREND_DIR=$PWD
 
