@@ -1,18 +1,13 @@
 #! /bin/bash
 # 自分のリポジトリから更新するスクリプト
 
+MY_GITHUB_DIR=~/labo/github.com/
+MY_GITHUB=`ls ${MY_GITHUB_DIR} | sed "s|^|${MY_GITHUB_DIR}|"`
 
 GIT_REPOS_ARRAY=\
 (\
  ~/.vim/neobundle.vim\
- ~/labo/dotfiles\
- ~/labo/vim/mysnip\
- ~/labo/vim/myvim_dict\
- ~/labo/vim/unite-outline-sources\
- ~/labo/vim/unite-picktodo\
- ~/labo/codepocket\
- ~/labo/playground\
- ~/labo/personal_tips\
+ $MY_GITHUB
 )
 CURREND_DIR=$PWD
 
