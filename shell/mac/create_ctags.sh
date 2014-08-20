@@ -1,6 +1,25 @@
 # !/bin/bash
 
-TAGFILE_DIR=`dirName $0`
+function usage()
+{
+    echo "createTags [targetPath]"
+}
 
-ctags -f ${TAGFILE_DIR}/tags -R ${TAGFILE_DIR}
+function main()
+{
+    if [ $# -lt 1 ]; then
+        usage
+        exit 1
+    fi
+    if [ ! -d $1 ]; then
+        echo "not a directory $1"
+        exit 1
+    fi
 
+    TARGET_PATH=$1
+    ABSPATH=`cd $TARGET_PATH && pwd`
+
+    ctags -f ${ABSPATH}/tags ${ABSPATH}
+}
+
+main $@
