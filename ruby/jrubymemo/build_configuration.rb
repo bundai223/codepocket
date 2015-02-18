@@ -28,7 +28,7 @@ configuration do |c|
 	# A list of directories where source files reside
 	# default value: ["src"]
 	#
-	c.source_dirs = ["src", "lib/ruby"]
+	c.source_dirs = ["src", "lib/ruby", "lib/ruby/gems/jrubyfx-1.1.1-java/lib"]
 
 	# A list of regexps of files to exclude
 	# default value: []
